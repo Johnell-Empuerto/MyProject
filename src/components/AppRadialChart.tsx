@@ -74,7 +74,7 @@ export function AppRadialChart() {
             startAngle={-90}
             endAngle={380}
             innerRadius={30}
-            outerRadius={126}
+            outerRadius={115}
           >
             <ChartTooltip
               cursor={false}
@@ -93,9 +93,9 @@ export function AppRadialChart() {
         </ChartContainer>
       </CardContent>
 <CardFooter className="text-sm flex flex-col gap-1">
-  <div className="flex items-center gap-2 font-medium text-green-600">
+  <div className="flex items-center gap-2 font-medium text-green-600 py-0 px-0">
     <TrendingUp className="h-4 w-4" />
-    Sales increased by <span className="font-semibold">5.2%</span> this month
+    <p className="text-[12px]">Sales increased by <span className="font-semibold">5.2%</span> this month</p>
   </div>
   <div className="text-muted-foreground text-center">
     Based on total sales from January to June 2024
