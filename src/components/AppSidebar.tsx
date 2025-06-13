@@ -1,29 +1,26 @@
 import {
  
+  ChartArea,
   ChevronUp,
   Home,
   Inbox,
-  LayoutDashboard,
   LogOut,
   NotebookPen,
-  NotepadText,
-  Plus,
-
   Settings,
   Target,
   User,
-  UserRoundCog,
 } from "lucide-react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { Roboto } from 'next/font/google'; // Import Roboto
 
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupAction,
+  // SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
@@ -40,6 +37,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+
+// Configure Roboto
+const roboto = Roboto({
+  weight: ['300'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 // Menu items.
 const entries = [
@@ -129,9 +134,32 @@ const settings = [
   },
 ];
 
+const reports = [
+  {
+    title: "MPR (ADC)",
+    url: "#",
+    icon: ChartArea,
+  },
+  {
+    title: "MPR (C4)",
+    url: "#",
+    icon: ChartArea,
+  },
+  {
+    title: "MPR (KD)",
+    url: "#",
+    icon: ChartArea,
+  },
+  {
+    title: "KD Pallet",
+    url: "#",
+    icon: ChartArea,
+  },
+];
+
 export function AppSidebar() {
   return (
-    <Sidebar variant="floating" collapsible="icon" className="group">
+    <Sidebar variant="floating" collapsible="icon" className={`group ${roboto.className}`}>
       {/* Header */}
       <SidebarHeader className="py-4">
         <SidebarMenu>
@@ -160,9 +188,9 @@ export function AppSidebar() {
         {/* Home and Dashboard*/}
         <SidebarGroup>
           <SidebarGroupLabel>Dashboard</SidebarGroupLabel>
-          <SidebarGroupAction>
+          {/* <SidebarGroupAction>
             <LayoutDashboard /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction>
+          </SidebarGroupAction> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {dashboard.map((item) => (
@@ -170,7 +198,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon className="mr-1" />
-                      <span>{item.title}</span>
+                      <span className="text-[12px] tracking-wide	">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -182,9 +210,9 @@ export function AppSidebar() {
         {/* Planning*/}
         <SidebarGroup>
           <SidebarGroupLabel>Planning</SidebarGroupLabel>
-          <SidebarGroupAction>
+          {/* <SidebarGroupAction>
             <NotepadText /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction>
+          </SidebarGroupAction> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {planning.map((item) => (
@@ -192,7 +220,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon className="mr-1" />
-                      <span>{item.title}</span>
+                      <span className="text-[12px] tracking-wide	 style={{ fontWeight: 300 }}">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -204,9 +232,9 @@ export function AppSidebar() {
         {/* Entries*/}
         <SidebarGroup>
           <SidebarGroupLabel>Entries</SidebarGroupLabel>
-          <SidebarGroupAction>
+          {/* <SidebarGroupAction>
             <Plus /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction>
+          </SidebarGroupAction> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {entries.map((item) => (
@@ -214,7 +242,29 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon className="mr-1" />
-                      <span>{item.title}</span>
+                      <span className="text-[12px] tracking-wide	 style={{ fontWeight: 300 }}">{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+                {/* Reports*/}
+        <SidebarGroup>
+          <SidebarGroupLabel>Reports</SidebarGroupLabel>
+          {/* <SidebarGroupAction>
+            <ChartPie /> <span className="sr-only">Add Project</span>
+          </SidebarGroupAction> */}
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {reports.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild>
+                    <a href={item.url}>
+                      <item.icon className="mr-1" />
+                      <span className="text-[12px] tracking-wide	 style={{ fontWeight: 300 }}">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -226,9 +276,9 @@ export function AppSidebar() {
         {/* Settings*/}
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
-          <SidebarGroupAction>
+          {/* <SidebarGroupAction>
             <UserRoundCog /> <span className="sr-only">Add Project</span>
-          </SidebarGroupAction>
+          </SidebarGroupAction> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {settings.map((item) => (
@@ -236,7 +286,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
                       <item.icon className="mr-1" />
-                      <span>{item.title}</span>
+                      <span className="text-[12px] tracking-wide	 style={{ fontWeight: 300 }}">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
