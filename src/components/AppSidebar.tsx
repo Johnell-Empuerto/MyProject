@@ -73,7 +73,7 @@ const entries = [
 const planning = [
   {
     title: "Production Management",
-    url: "#",
+    url: "/production",
     icon: Target,
   },
   {
@@ -86,7 +86,7 @@ const planning = [
 const dashboard = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
 ];
