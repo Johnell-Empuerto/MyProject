@@ -94,7 +94,7 @@ const dashboard = [
 const settings = [
   {
     title: "Product Master",
-    url: "#",
+    url: "/product-master",
     icon: Settings,
   },
   {
