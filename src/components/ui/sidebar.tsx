@@ -149,7 +149,7 @@ function SidebarProvider({
       </TooltipProvider>
     </SidebarContext.Provider>
   )
-}
+} 
 
 function Sidebar({
   side = "left",
