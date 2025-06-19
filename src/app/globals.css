@@ -123,3 +123,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+.diagonal-split-cell {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.diagonal-split-cell::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: 100%;
+    border-top: 1px solid white;
+    transform: rotate(-45deg);
+}
+
+.diagonal-split-cell .top-left,
+.diagonal-split-cell .bottom-right {
+  position: absolute;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.diagonal-split-cell .top-left {
+  top: 4px;
+  left: 6px;
+}
+
+.diagonal-split-cell .bottom-right {
+  bottom: 4px;
+  right: 6px;
+}
