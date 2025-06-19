@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ProdTable } from "@/components/ProdTable";
 import { ProdPieChart } from "@/components/ProdPieChart";
+import '../styles/custom.css';
 
 const page = () => {
   return (
@@ -65,7 +66,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="p-2 md:col-span-2 2xl:col-span-3 border border-primary rounded-lg">
+      <div className="p-2 md:col-span-2 2xl:col-span-3 rounded-lg">
         <CalendarComponent />
       </div>
     </div>
