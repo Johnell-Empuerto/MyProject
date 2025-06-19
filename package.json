@@ -15,7 +15,11 @@
     "@fullcalendar/list": "^6.1.17",
     "@fullcalendar/react": "^6.1.17",
     "@fullcalendar/timegrid": "^6.1.17",
+<<<<<<< HEAD
     "@radix-ui/react-accordion": "^1.2.11",
+=======
+    "@hookform/resolvers": "^5.1.1",
+>>>>>>> 4f80355 (add og login page)
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
@@ -32,6 +36,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.18.1",
     "lucide-react": "^0.514.0",
     "mssql": "^11.0.1",
     "next": "^15.3.3",
@@ -40,10 +45,12 @@
     "react-calendar": "^6.0.0",
     "react-day-picker": "^9.7.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.58.1",
     "recharts": "^2.15.3",
     "swal": "^0.1.0",
     "sweetalert2": "^11.22.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
