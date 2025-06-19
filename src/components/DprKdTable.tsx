@@ -13,7 +13,7 @@ import {
 const generateTimeRange = (startHour: number, startMin: number, count: number) => {
     const ranges = []
     let hour = startHour
-    let minute = startMin
+    const minute = startMin // Changed from let to const
 
     for (let i = 0; i < count; i++) {
         const start = `${hour}:${minute.toString().padStart(2, '0')}`
