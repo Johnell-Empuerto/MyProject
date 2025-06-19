@@ -60,7 +60,7 @@ const entries = [
   },
   {
     title: "DPR Entry (KD)",
-    url: "#",
+    url: "/dpr-kd",
     icon: NotebookPen,
   },
   {
